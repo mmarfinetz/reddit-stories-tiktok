@@ -95,3 +95,36 @@ img {
     max-width: none;
     height: auto;
 }
+
+/* Normal styles that apply to all devices */
+img.win95-image {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #000; /* Example style */
+}
+
+/* Media query for devices with a screen width of up to 768 pixels */
+@media screen and (max-width: 768px) {
+    img.win95-image {
+        /* Example: you might want to remove border on smaller screens */
+        border: none;
+    }
+    
+    /* If other elements need styling on mobile devices, you would add them here. */
+    .some-other-class {
+        padding: 10px; /* Example */
+    }
+
+    nav ul li {
+        /* Adjust navigation layout for smaller screens */
+        display: block;
+        margin: 0;
+    }
+
+    .win95-header {
+        /* Adjust header size for smaller screens */
+        padding: 10px 5px;
+    }
+
+    /* And so on for other elements you need to adjust for mobile */
+}
