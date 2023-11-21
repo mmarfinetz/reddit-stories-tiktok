@@ -1,53 +1,97 @@
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    background: #f4f4f4;
+/* Begin with a reset to unify the appearance across browsers */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
 }
 
-header {
-    background: #333;
-    color: #fff;
-    padding: 1rem 0;
+/* Classic Windows font */
+body.win95-look {
+    font-family: "MS Sans Serif", sans-serif;
+    background-color: #008080; /* Teal background, common in Windows 95 */
+    color: #000000;
+}
+
+/* Header Styles */
+.win95-header {
+    background-color: #c0c0c0; /* Windows 95 gray background */
+    padding: 5px 0;
     text-align: center;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #ffffff #000000 #000000 #ffffff; /* 3D border effect */
 }
 
-header h1 {
-    margin: 0;
+.win95-header h1 {
+    font-weight: bold;
+    font-size: 18px;
 }
 
+/* Navigation Styles */
 nav ul {
-    list-style: none;
     padding: 0;
 }
 
 nav ul li {
     display: inline;
-    margin: 0 10px;
+    margin-right: 5px;
 }
 
-nav ul li a {
-    color: #fff;
+nav ul li a.win95-link {
+    color: #000000;
     text-decoration: none;
+    background-color: #c0c0c0;
+    padding: 2px 6px;
+    border-style: outset;
+    border-width: 2px;
+    border-color: #ffffff #808080 #808080 #ffffff; /* Button-like border */
 }
 
-main {
-    padding: 1rem;
+/* Hover effect for links */
+nav ul li a.win95-link:hover {
+    background-color: #a0a0a0;
+    border-color: #808080 #ffffff #ffffff #808080; /* Inverted border for pressed effect */
 }
 
-footer {
+/* Main Content Styles */
+.win95-main {
+    background-color: #ffffff;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #000000;
+    padding: 10px;
+    margin: 10px;
+}
+
+/* Image Styles */
+img.win95-image {
+    border-width: 1px;
+    border-style: solid;
+    border-color: #000000;
+}
+
+/* Footer Styles */
+.win95-footer {
+    background-color: #c0c0c0;
+    color: #000000;
+    padding: 5px 0;
     text-align: center;
-    padding: 1rem 0;
-    background: #333;
-    color: #fff;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #ffffff #000000 #000000 #ffffff; /* 3D border effect */
 }
 
-footer p {
-    margin: 0;
+.win95-footer p {
+    font-size: 12px;
 }
 
+/* Ensure that .current-year class is properly rendered */
+.current-year {
+    display: inline;
+}
+
+/* Remove max-width from img for a more authentic Windows 95 look */
 img {
-    max-width: 100%;
+    max-width: none;
     height: auto;
 }
